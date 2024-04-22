@@ -33,6 +33,11 @@
             patient_reg_bt = new Button();
             bill_details_bt = new Button();
             label1 = new Label();
+            textBox9 = new TextBox();
+            label13 = new Label();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // appt_bt
@@ -49,7 +54,7 @@
             // patient_history_bt
             // 
             patient_history_bt.Font = new Font("Book Antiqua", 12F, FontStyle.Bold);
-            patient_history_bt.Location = new Point(307, 218);
+            patient_history_bt.Location = new Point(307, 208);
             patient_history_bt.Margin = new Padding(2);
             patient_history_bt.Name = "patient_history_bt";
             patient_history_bt.Size = new Size(230, 41);
@@ -60,7 +65,7 @@
             // patient_reg_bt
             // 
             patient_reg_bt.Font = new Font("Book Antiqua", 12F, FontStyle.Bold);
-            patient_reg_bt.Location = new Point(44, 218);
+            patient_reg_bt.Location = new Point(44, 208);
             patient_reg_bt.Margin = new Padding(2);
             patient_reg_bt.Name = "patient_reg_bt";
             patient_reg_bt.Size = new Size(230, 41);
@@ -84,12 +89,63 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Book Antiqua", 24F, FontStyle.Bold | FontStyle.Italic);
-            label1.Location = new Point(204, 54);
+            label1.Location = new Point(206, 19);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(197, 49);
             label1.TabIndex = 8;
             label1.Text = "Welcome!";
+            // 
+            // textBox9
+            // 
+            textBox9.Location = new Point(288, 70);
+            textBox9.Margin = new Padding(2);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(187, 27);
+            textBox9.TabIndex = 57;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.Font = new Font("Book Antiqua", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(117, 68);
+            label13.Margin = new Padding(2, 0, 2, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(143, 32);
+            label13.TabIndex = 56;
+            label13.Text = "PatientID:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Book Antiqua", 16F, FontStyle.Bold);
+            label2.Location = new Point(76, 99);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(198, 32);
+            label2.TabIndex = 54;
+            label2.Text = "Patient Name: ";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(288, 105);
+            textBox1.Margin = new Padding(2);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(187, 27);
+            textBox1.TabIndex = 57;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Book Antiqua", 12F, FontStyle.Bold);
+            button1.Location = new Point(44, 268);
+            button1.Margin = new Padding(2);
+            button1.Name = "button1";
+            button1.Size = new Size(230, 41);
+            button1.TabIndex = 10;
+            button1.Text = "Test History";
+            button1.UseVisualStyleBackColor = true;
             // 
             // patient_homepage
             // 
@@ -98,8 +154,13 @@
             BackgroundImage = Properties.Resources.Background_image;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(583, 584);
+            Controls.Add(textBox1);
+            Controls.Add(textBox9);
+            Controls.Add(label13);
+            Controls.Add(label2);
             Controls.Add(appt_bt);
             Controls.Add(patient_history_bt);
+            Controls.Add(button1);
             Controls.Add(patient_reg_bt);
             Controls.Add(bill_details_bt);
             Controls.Add(label1);
@@ -115,5 +176,10 @@
         private Button patient_reg_bt;
         private Button bill_details_bt;
         private Label label1;
+        private TextBox textBox9;
+        private Label label13;
+        private Label label2;
+        private TextBox textBox1;
+        private Button button1;
     }
 }
