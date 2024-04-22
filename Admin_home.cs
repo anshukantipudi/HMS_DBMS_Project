@@ -21,5 +21,34 @@ namespace HMS
         {
 
         }
+
+        private void Admin_home_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form3 frm = new Form3();
+            frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Register_employee frm = new Register_employee();
+            frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Execute_Queries frm = new Execute_Queries();
+            frm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            view_tables frm = new view_tables();
+            frm.Show();
+        }
     }
 }

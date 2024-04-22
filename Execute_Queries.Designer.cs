@@ -89,6 +89,7 @@
             ViewGrid_bt.TabIndex = 5;
             ViewGrid_bt.Text = "Execute";
             ViewGrid_bt.UseVisualStyleBackColor = true;
+            ViewGrid_bt.Click += ViewGrid_bt_Click;
             // 
             // Execute_Queries
             // 
@@ -105,6 +106,7 @@
             Controls.Add(richTextBox1);
             Name = "Execute_Queries";
             Text = "Execute_Queries";
+            Load += Execute_Queries_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

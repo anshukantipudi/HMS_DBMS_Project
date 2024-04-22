@@ -59,6 +59,7 @@
             button2.TabIndex = 3;
             button2.Text = "Execute Queries";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -70,6 +71,7 @@
             button1.TabIndex = 3;
             button1.Text = "Register patient";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -81,6 +83,7 @@
             button3.TabIndex = 3;
             button3.Text = "Register employee";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -92,6 +95,7 @@
             button4.TabIndex = 3;
             button4.Text = "View Tables";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // Admin_home
             // 
@@ -109,6 +113,7 @@
             Controls.Add(label1);
             Name = "Admin_home";
             Text = "Admin_home";
+            Load += Admin_home_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -78,6 +78,7 @@
             ViewGrid_bt.TabIndex = 7;
             ViewGrid_bt.Text = "View";
             ViewGrid_bt.UseVisualStyleBackColor = true;
+            ViewGrid_bt.Click += ViewGrid_bt_Click;
             // 
             // dataGridView1
             // 
@@ -102,6 +103,7 @@
             Controls.Add(label1);
             Name = "view_tables";
             Text = "view_tables";
+            Load += view_tables_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

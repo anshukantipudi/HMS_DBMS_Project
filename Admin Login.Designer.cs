@@ -46,6 +46,7 @@
             button2.TabIndex = 19;
             button2.Text = "login";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // textBox2
             // 
@@ -116,6 +117,7 @@
             Controls.Add(label1);
             Name = "Admin_Login";
             Text = "Admin_Login";
+            Load += Admin_Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }
