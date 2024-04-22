@@ -35,6 +35,7 @@
             button2 = new Button();
             label2 = new Label();
             notifyIcon1 = new NotifyIcon(components);
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -54,7 +55,7 @@
             // 
             button1.Font = new Font("Book Antiqua", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.Location = new Point(227, 160);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(128, 37);
             button1.TabIndex = 1;
@@ -66,7 +67,7 @@
             // 
             button2.Font = new Font("Book Antiqua", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.Location = new Point(227, 202);
-            button2.Margin = new Padding(2, 2, 2, 2);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(128, 34);
             button2.TabIndex = 2;
@@ -91,6 +92,18 @@
             notifyIcon1.Text = "notifyIcon1";
             notifyIcon1.Visible = true;
             // 
+            // button3
+            // 
+            button3.Font = new Font("Book Antiqua", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Location = new Point(227, 240);
+            button3.Margin = new Padding(2);
+            button3.Name = "button3";
+            button3.Size = new Size(128, 34);
+            button3.TabIndex = 2;
+            button3.Text = "Admin";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button2_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -100,10 +113,11 @@
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(585, 584);
             Controls.Add(label2);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Login";
             Text = "Hospital Management System ";
             Load += Form1_Load_1;
@@ -118,5 +132,6 @@
         private Button button2;
         private Label label2;
         private NotifyIcon notifyIcon1;
+        private Button button3;
     }
 }

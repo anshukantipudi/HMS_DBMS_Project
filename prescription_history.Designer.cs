@@ -1,6 +1,6 @@
 ﻿namespace HMS
 {
-    partial class Billing_Details
+    partial class prescription_history
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Billing_Details));
             ViewGrid_bt = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
@@ -37,52 +36,49 @@
             // 
             // ViewGrid_bt
             // 
-            ViewGrid_bt.Location = new Point(28, 522);
-            ViewGrid_bt.Margin = new Padding(2, 2, 2, 2);
+            ViewGrid_bt.Location = new Point(31, 537);
+            ViewGrid_bt.Margin = new Padding(2);
             ViewGrid_bt.Name = "ViewGrid_bt";
             ViewGrid_bt.Size = new Size(129, 30);
-            ViewGrid_bt.TabIndex = 3;
+            ViewGrid_bt.TabIndex = 7;
             ViewGrid_bt.Text = "View";
             ViewGrid_bt.UseVisualStyleBackColor = true;
-            ViewGrid_bt.Click += ViewGrid_bt_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(28, 69);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Location = new Point(31, 84);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(515, 431);
-            dataGridView1.TabIndex = 2;
+            dataGridView1.TabIndex = 6;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Book Antiqua", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(200, 20);
+            label1.Location = new Point(140, 23);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(171, 36);
-            label1.TabIndex = 19;
-            label1.Text = "Bill Details";
+            label1.Size = new Size(293, 36);
+            label1.TabIndex = 15;
+            label1.Text = "Prescription History";
             // 
-            // Billing_Details
+            // prescription_history
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(585, 584);
+            BackgroundImage = Properties.Resources.Background_image;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(583, 584);
             Controls.Add(label1);
             Controls.Add(ViewGrid_bt);
             Controls.Add(dataGridView1);
-            Margin = new Padding(2, 2, 2, 2);
-            Name = "Billing_Details";
-            Text = "Billing_Details";
-            Load += Billing_Details_Load;
+            Name = "prescription_history";
+            Text = "prescription_history";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -38,9 +38,9 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(214, 132);
+            richTextBox1.Location = new Point(214, 118);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(550, 62);
+            richTextBox1.Size = new Size(314, 76);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "";
             // 
@@ -49,7 +49,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Book Antiqua", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(43, 150);
+            label2.Location = new Point(34, 138);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(149, 28);
@@ -62,7 +62,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Book Antiqua", 24F, FontStyle.Bold | FontStyle.Italic);
-            label1.Location = new Point(245, 37);
+            label1.Location = new Point(149, 31);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(306, 49);
@@ -76,13 +76,13 @@
             dataGridView1.Location = new Point(43, 267);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(721, 284);
+            dataGridView1.Size = new Size(492, 284);
             dataGridView1.TabIndex = 4;
             // 
             // ViewGrid_bt
             // 
             ViewGrid_bt.Font = new Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ViewGrid_bt.Location = new Point(327, 210);
+            ViewGrid_bt.Location = new Point(189, 206);
             ViewGrid_bt.Margin = new Padding(2);
             ViewGrid_bt.Name = "ViewGrid_bt";
             ViewGrid_bt.Size = new Size(138, 37);
@@ -94,8 +94,10 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightBlue;
-            ClientSize = new Size(800, 599);
+            BackColor = SystemColors.GradientActiveCaption;
+            BackgroundImage = Properties.Resources.Background_image;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(585, 584);
             Controls.Add(ViewGrid_bt);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
