@@ -43,10 +43,10 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Book Antiqua", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(145, 108);
+            label1.Location = new Point(181, 135);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(311, 41);
+            label1.Size = new Size(362, 49);
             label1.TabIndex = 0;
             label1.Text = "Who is logging in?";
             label1.Click += label1_Click;
@@ -54,10 +54,10 @@
             // button1
             // 
             button1.Font = new Font("Book Antiqua", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(227, 160);
+            button1.Location = new Point(284, 200);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(128, 37);
+            button1.Size = new Size(160, 46);
             button1.TabIndex = 1;
             button1.Text = "Employee";
             button1.UseVisualStyleBackColor = true;
@@ -66,10 +66,10 @@
             // button2
             // 
             button2.Font = new Font("Book Antiqua", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(227, 202);
+            button2.Location = new Point(284, 252);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(128, 34);
+            button2.Size = new Size(160, 42);
             button2.TabIndex = 2;
             button2.Text = "Patient";
             button2.UseVisualStyleBackColor = true;
@@ -80,10 +80,10 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Book Antiqua", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(1, 34);
+            label2.Location = new Point(1, 42);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(587, 36);
+            label2.Size = new Size(702, 45);
             label2.TabIndex = 3;
             label2.Text = "Welcome to Hospital Management System";
             // 
@@ -95,23 +95,23 @@
             // button3
             // 
             button3.Font = new Font("Book Antiqua", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(227, 240);
+            button3.Location = new Point(284, 300);
             button3.Margin = new Padding(2);
             button3.Name = "button3";
-            button3.Size = new Size(128, 34);
-            button3.TabIndex = 2;
+            button3.Size = new Size(160, 42);
+            button3.TabIndex = 3;
             button3.Text = "Admin";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button2_Click;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(585, 584);
+            ClientSize = new Size(731, 730);
             Controls.Add(label2);
             Controls.Add(button3);
             Controls.Add(button2);

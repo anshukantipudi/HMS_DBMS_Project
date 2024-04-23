@@ -54,8 +54,7 @@ namespace HMS
 
         private void inv_mgmt_bt_Click(object sender, EventArgs e)
         {
-            Inventory_Details form = new Inventory_Details();
-            form.Show();
+            
         }
     }
 }

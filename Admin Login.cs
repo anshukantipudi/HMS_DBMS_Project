@@ -58,6 +58,7 @@ namespace HMS
         private void Admin_Login_Load(object sender, EventArgs e)
         {
             Connect_DB();
+            conn.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

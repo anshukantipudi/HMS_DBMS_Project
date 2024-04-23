@@ -68,7 +68,11 @@ namespace HMS
                 try
                 {
                     MySqlDataReader dr = command.ExecuteReader();
-                    pidcheck = 1;
+                    dr.Read();
+                    if (dr.GetString(0) == patient_id)
+                    {
+                        pidcheck = 1;
+                    }
                     dr.Close();
                 }
                 catch (Exception ex)
@@ -85,7 +89,11 @@ namespace HMS
                     try
                     {
                         MySqlDataReader dr = command.ExecuteReader();
-                        pid_pwd_check = 1;
+                        dr.Read();
+                        if(dr.GetString(0) == password)
+                        {
+                            pid_pwd_check = 1;
+                        }
                         dr.Close();
                     }
                     catch (Exception ex)

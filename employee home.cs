@@ -40,23 +40,25 @@ namespace HMS
 
         private void employee_home_Load(object sender, EventArgs e)
         {
+            Connect_DB();
+
             // Sample emp_id to check
             string empIdToCheck = employeeID;
 
             // Check Nurse table
-            string nurseQuery = "SELECT * FROM Employee e LEFT JOIN Nurse n ON e.emp_id = n.emp_id WHERE e.emp_id = @empIdToCheck";
+            string nurseQuery = "SELECT * FROM Employee e LEFT JOIN Nurse n ON e.e_id = n.e_id WHERE e.e_id = @empIdToCheck";
             bool isNurse = CheckTable(conn, nurseQuery, empIdToCheck);
 
             // Check Doctor table
-            string doctorQuery = "SELECT * FROM Employee e LEFT JOIN Doctor d ON e.emp_id = d.emp_id WHERE e.emp_id = @empIdToCheck";
+            string doctorQuery = "SELECT * FROM Employee e LEFT JOIN Doctor d ON e.e_id = d.e_id WHERE e.e_id = @empIdToCheck";
             bool isDoctor = CheckTable(conn, doctorQuery, empIdToCheck);
 
             // Check Receptionist table
-            string receptionistQuery = "SELECT * FROM Employee e LEFT JOIN Receptionist r ON e.emp_id = r.emp_id WHERE e.emp_id = @empIdToCheck";
+            string receptionistQuery = "SELECT * FROM Employee e LEFT JOIN Receptionist r ON e.e_id = r.e_id WHERE e.e_id = @empIdToCheck";
             bool isReceptionist = CheckTable(conn, receptionistQuery, empIdToCheck);
 
             // Check NonMedicalStaff table
-            string nonMedicalStaffQuery = "SELECT * FROM Employee e LEFT JOIN Non_Med_Staff nms ON e.emp_id = nms.emp_id WHERE e.emp_id = @empIdToCheck";
+            string nonMedicalStaffQuery = "SELECT * FROM Employee e LEFT JOIN Non_Med_Staff nms ON e.e_id = nms.e_id WHERE e.e_id = @empIdToCheck";
             bool isNonMedicalStaff = CheckTable(conn, nonMedicalStaffQuery, empIdToCheck);
 
             if (isNurse)
@@ -76,7 +78,6 @@ namespace HMS
                 Table = "Non_Med_Staff";
             }
 
-            Connect_DB();
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT e_id,name,gender,b_group,phone,dob,email,salary FROM Employee WHERE e_id = '" + employeeID + "'";
