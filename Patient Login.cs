@@ -100,7 +100,7 @@ namespace HMS
             {
                 Clear_TB();
                 MessageBox.Show("Successfully logged in!");
-                Patient_Home frm = new Patient_Home(patient_id);
+                patient_homepage frm = new patient_homepage(patient_id);
                 this.Hide();
                 frm.Show();
             }

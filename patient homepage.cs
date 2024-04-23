@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+using MySql.Data.MySqlClient;
+
 namespace HMS
 {
     public partial class patient_homepage : Form
     {
-        public patient_homepage()
+        String patient_id;
+        public patient_homepage(string patient_id)
         {
             InitializeComponent();
+            this.patient_id = patient_id;
+        }
+
+        private void patient_homepage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

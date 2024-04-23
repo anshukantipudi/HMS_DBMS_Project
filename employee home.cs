@@ -142,8 +142,10 @@ namespace HMS
             }
             else if(Table == "Non_Med_Staff")
             {
-
+                MessageBox.Show("No Extra Functionality!");
             }
+
+            //TODO: Doctor,Nurse,Rec Home forms
         }
     }
 }
