@@ -16,6 +16,22 @@ namespace HMS
     public partial class patient_homepage : Form
     {
         String patient_id;
+
+        //Connection string
+        MySqlConnection conn = new MySqlConnection("SERVER=LOCALHOST;DATABASE=HMS;UID=root;PASSWORD=anshu;");
+
+        public void Connect_DB()
+        {
+            try
+            {
+                conn.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public patient_homepage(string patient_id)
         {
             InitializeComponent();
@@ -24,7 +40,31 @@ namespace HMS
 
         private void patient_homepage_Load(object sender, EventArgs e)
         {
+            Connect_DB();
 
+            MySqlCommand command = conn.CreateCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "SELECT patient_id,name FROM Patient WHERE patient_id = '" + patient_id + "'";
+
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            textBox9.Text = reader.GetString(0);
+            textBox1.Text = reader.GetString(1);
+
+            reader.Close();
+            command.Dispose();
+            conn.Close();
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bill_details_bt_Click(object sender, EventArgs e)
+        {
+            patient_details frm = new patient_details(patient_id);
+            frm.Show();
         }
     }
 }

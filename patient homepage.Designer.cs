@@ -83,6 +83,7 @@
             bill_details_bt.TabIndex = 9;
             bill_details_bt.Text = "Patient Details";
             bill_details_bt.UseVisualStyleBackColor = true;
+            bill_details_bt.Click += bill_details_bt_Click;
             // 
             // label1
             // 
@@ -103,6 +104,7 @@
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(233, 31);
             textBox9.TabIndex = 57;
+            textBox9.TextChanged += textBox9_TextChanged;
             // 
             // label13
             // 
@@ -164,7 +166,7 @@
             Controls.Add(patient_reg_bt);
             Controls.Add(bill_details_bt);
             Controls.Add(label1);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "patient_homepage";
             Text = "patient_homepage";
             Load += patient_homepage_Load;
