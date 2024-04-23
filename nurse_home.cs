@@ -12,9 +12,28 @@ namespace HMS
 {
     public partial class nurse_home : Form
     {
-        public nurse_home()
+        String e_id;
+        public nurse_home(string e_id)
         {
             InitializeComponent();
+            this.e_id = e_id;
+        }
+
+        private void nurse_home_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            view_admitted frm = new view_admitted();
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            view_admitted_details frm = new view_admitted_details();
+            frm.Show();
         }
     }
 }

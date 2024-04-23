@@ -36,23 +36,24 @@
             // 
             // ViewGrid_bt
             // 
-            ViewGrid_bt.Location = new Point(33, 511);
+            ViewGrid_bt.Location = new Point(41, 639);
             ViewGrid_bt.Margin = new Padding(2);
             ViewGrid_bt.Name = "ViewGrid_bt";
-            ViewGrid_bt.Size = new Size(129, 30);
+            ViewGrid_bt.Size = new Size(161, 38);
             ViewGrid_bt.TabIndex = 19;
             ViewGrid_bt.Text = "View";
             ViewGrid_bt.UseVisualStyleBackColor = true;
+            ViewGrid_bt.Click += ViewGrid_bt_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(33, 63);
+            dataGridView1.Location = new Point(41, 79);
             dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(515, 431);
+            dataGridView1.Size = new Size(644, 539);
             dataGridView1.TabIndex = 18;
             // 
             // label2
@@ -60,24 +61,26 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Book Antiqua", 12F);
-            label2.Location = new Point(33, 37);
+            label2.Location = new Point(41, 46);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(180, 24);
+            label2.Size = new Size(215, 28);
             label2.TabIndex = 20;
             label2.Text = "Admitted Patients:";
             // 
             // view_admitted
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background_image;
-            ClientSize = new Size(578, 570);
+            ClientSize = new Size(722, 712);
             Controls.Add(label2);
             Controls.Add(ViewGrid_bt);
             Controls.Add(dataGridView1);
+            Margin = new Padding(4);
             Name = "view_admitted";
             Text = "view_admitted";
+            Load += view_admitted_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

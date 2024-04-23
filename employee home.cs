@@ -141,7 +141,8 @@ namespace HMS
             }
             else if (Table == "Nurse")
             {
-
+                nurse_home frm = new nurse_home(employeeID);
+                frm.Show();
             }
             else if (Table == "Receptionist")
             {
