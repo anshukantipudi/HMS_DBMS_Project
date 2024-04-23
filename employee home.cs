@@ -15,6 +15,7 @@ namespace HMS
     public partial class employee_home : Form
     {
         String employeeID;
+        String Table = "";
 
         //Connection string
         MySqlConnection conn = new MySqlConnection("SERVER=LOCALHOST;DATABASE=HMS;UID=root;PASSWORD=anshu;");
@@ -41,7 +42,6 @@ namespace HMS
         {
             // Sample emp_id to check
             string empIdToCheck = employeeID;
-            String Table = "";
 
             // Check Nurse table
             string nurseQuery = "SELECT * FROM Employee e LEFT JOIN Nurse n ON e.emp_id = n.emp_id WHERE e.emp_id = @empIdToCheck";
@@ -92,7 +92,7 @@ namespace HMS
             textBox4.Text = reader.GetString(5);
             textBox6.Text = reader.GetString(6);
             textBox7.Text = reader.GetString(7);
-            //add department somehow
+            //added department somehow i'm too good bro
 
             reader.Close();
 
@@ -128,7 +128,22 @@ namespace HMS
 
         private void advanced_bt_Click(object sender, EventArgs e)
         {
-            
+            if (Table == "Doctor")
+            {
+
+            }
+            else if (Table == "Nurse")
+            {
+
+            }
+            else if (Table == "Receptionist")
+            {
+
+            }
+            else if(Table == "Non_Med_Staff")
+            {
+
+            }
         }
     }
 }
