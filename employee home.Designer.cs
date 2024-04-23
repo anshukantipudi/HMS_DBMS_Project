@@ -48,6 +48,7 @@
             label10 = new Label();
             textBox10 = new TextBox();
             patient_history_bt = new Button();
+            advanced_bt = new Button();
             SuspendLayout();
             // 
             // label1
@@ -258,6 +259,18 @@
             patient_history_bt.UseVisualStyleBackColor = true;
             patient_history_bt.Click += patient_history_bt_Click;
             // 
+            // advanced_bt
+            // 
+            advanced_bt.Font = new Font("Book Antiqua", 12F, FontStyle.Bold);
+            advanced_bt.Location = new Point(180, 610);
+            advanced_bt.Margin = new Padding(2);
+            advanced_bt.Name = "advanced_bt";
+            advanced_bt.Size = new Size(288, 51);
+            advanced_bt.TabIndex = 68;
+            advanced_bt.Text = "Advanced";
+            advanced_bt.UseVisualStyleBackColor = true;
+            advanced_bt.Click += advanced_bt_Click;
+            // 
             // employee_home
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -265,6 +278,7 @@
             BackColor = SystemColors.GradientActiveCaption;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(658, 672);
+            Controls.Add(advanced_bt);
             Controls.Add(patient_history_bt);
             Controls.Add(textBox6);
             Controls.Add(textBox10);
@@ -314,5 +328,6 @@
         private Label label10;
         private TextBox textBox10;
         private Button patient_history_bt;
+        private Button advanced_bt;
     }
 }
