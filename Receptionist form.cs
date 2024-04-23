@@ -36,8 +36,7 @@ namespace HMS
 
         private void appt_bt_Click(object sender, EventArgs e)
         {
-            Appointment_Details form = new Appointment_Details();
-            form.Show();
+            
         }
 
         private void patient_history_bt_Click(object sender, EventArgs e)
