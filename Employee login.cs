@@ -94,7 +94,7 @@ namespace HMS
             {
                 Clear_TB();
                 MessageBox.Show("Successfully logged in!");
-                Form5 frm = new Form5(employee_id);
+                employee_home frm = new employee_home(employee_id);
                 //Link Employee form here
                 this.Hide();
                 frm.Show();
