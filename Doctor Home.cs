@@ -36,7 +36,7 @@ namespace HMS
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(this.emp_id);
+            
         }
     }
 }

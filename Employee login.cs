@@ -96,6 +96,7 @@ namespace HMS
                 MessageBox.Show("Successfully logged in!");
                 Form5 frm = new Form5(employee_id);
                 //Link Employee form here
+                this.Hide();
                 frm.Show();
             }
 

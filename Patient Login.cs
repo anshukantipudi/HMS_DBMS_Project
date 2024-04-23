@@ -100,9 +100,9 @@ namespace HMS
             {
                 Clear_TB();
                 MessageBox.Show("Successfully logged in!");
-                //Form5 frm = new Form5(patient_id);
-                //Link Patient form here
-                //frm.Show();
+                Patient_Home frm = new Patient_Home(patient_id);
+                this.Hide();
+                frm.Show();
             }
 
             conn.Close();
