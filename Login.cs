@@ -21,7 +21,7 @@ namespace HMS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -43,6 +43,12 @@ namespace HMS
         private void button1_Click(object sender, EventArgs e)
         {
             Form4 frm = new Form4();
+            frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Admin_Login frm = new Admin_Login();
             frm.Show();
         }
     }
