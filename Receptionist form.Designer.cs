@@ -34,8 +34,6 @@
             patient_reg_bt = new Button();
             patient_history_bt = new Button();
             appt_bt = new Button();
-            inv_mgmt_bt = new Button();
-            emp_details_bt = new Button();
             SuspendLayout();
             // 
             // label1
@@ -63,7 +61,7 @@
             // patient_reg_bt
             // 
             patient_reg_bt.Font = new Font("Book Antiqua", 12F, FontStyle.Bold);
-            patient_reg_bt.Location = new Point(58, 209);
+            patient_reg_bt.Location = new Point(58, 227);
             patient_reg_bt.Name = "patient_reg_bt";
             patient_reg_bt.Size = new Size(288, 51);
             patient_reg_bt.TabIndex = 3;
@@ -74,7 +72,7 @@
             // patient_history_bt
             // 
             patient_history_bt.Font = new Font("Book Antiqua", 12F, FontStyle.Bold);
-            patient_history_bt.Location = new Point(386, 209);
+            patient_history_bt.Location = new Point(386, 227);
             patient_history_bt.Name = "patient_history_bt";
             patient_history_bt.Size = new Size(288, 51);
             patient_history_bt.TabIndex = 4;
@@ -89,31 +87,9 @@
             appt_bt.Name = "appt_bt";
             appt_bt.Size = new Size(288, 51);
             appt_bt.TabIndex = 5;
-            appt_bt.Text = "Appointment Scheduling";
+            appt_bt.Text = "Appointment History";
             appt_bt.UseVisualStyleBackColor = true;
             appt_bt.Click += appt_bt_Click;
-            // 
-            // inv_mgmt_bt
-            // 
-            inv_mgmt_bt.Font = new Font("Book Antiqua", 12F, FontStyle.Bold);
-            inv_mgmt_bt.Location = new Point(386, 290);
-            inv_mgmt_bt.Name = "inv_mgmt_bt";
-            inv_mgmt_bt.Size = new Size(288, 51);
-            inv_mgmt_bt.TabIndex = 6;
-            inv_mgmt_bt.Text = "Inventory Management";
-            inv_mgmt_bt.UseVisualStyleBackColor = true;
-            inv_mgmt_bt.Click += inv_mgmt_bt_Click;
-            // 
-            // emp_details_bt
-            // 
-            emp_details_bt.Font = new Font("Book Antiqua", 12F, FontStyle.Bold);
-            emp_details_bt.Location = new Point(58, 290);
-            emp_details_bt.Name = "emp_details_bt";
-            emp_details_bt.Size = new Size(288, 51);
-            emp_details_bt.TabIndex = 7;
-            emp_details_bt.Text = "Employee Details";
-            emp_details_bt.UseVisualStyleBackColor = true;
-            emp_details_bt.Click += emp_details_bt_Click;
             // 
             // Form1
             // 
@@ -122,8 +98,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(731, 730);
-            Controls.Add(emp_details_bt);
-            Controls.Add(inv_mgmt_bt);
             Controls.Add(appt_bt);
             Controls.Add(patient_history_bt);
             Controls.Add(patient_reg_bt);
@@ -143,7 +117,5 @@
         private Button patient_reg_bt;
         private Button patient_history_bt;
         private Button appt_bt;
-        private Button inv_mgmt_bt;
-        private Button emp_details_bt;
     }
 }

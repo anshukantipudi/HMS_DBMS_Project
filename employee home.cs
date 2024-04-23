@@ -146,7 +146,8 @@ namespace HMS
             }
             else if (Table == "Receptionist")
             {
-
+                Form1 frm = new Form1(employeeID);
+                frm.Show();
             }
             else if(Table == "Non_Med_Staff")
             {
