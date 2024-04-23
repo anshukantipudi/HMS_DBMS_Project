@@ -41,10 +41,10 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Book Antiqua", 24F, FontStyle.Bold | FontStyle.Italic);
-            label1.Location = new Point(119, 34);
+            label1.Location = new Point(149, 42);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(337, 49);
+            label1.Size = new Size(406, 58);
             label1.TabIndex = 1;
             label1.Text = "Admin Homepage";
             label1.Click += label1_Click;
@@ -52,10 +52,10 @@
             // button2
             // 
             button2.Font = new Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(61, 248);
+            button2.Location = new Point(76, 310);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(172, 39);
+            button2.Size = new Size(215, 49);
             button2.TabIndex = 3;
             button2.Text = "Execute Queries";
             button2.UseVisualStyleBackColor = true;
@@ -64,10 +64,10 @@
             // button1
             // 
             button1.Font = new Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(61, 170);
+            button1.Location = new Point(76, 212);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(172, 39);
+            button1.Size = new Size(215, 49);
             button1.TabIndex = 3;
             button1.Text = "Register patient";
             button1.UseVisualStyleBackColor = true;
@@ -76,10 +76,10 @@
             // button3
             // 
             button3.Font = new Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(307, 170);
+            button3.Location = new Point(384, 212);
             button3.Margin = new Padding(2);
             button3.Name = "button3";
-            button3.Size = new Size(172, 39);
+            button3.Size = new Size(215, 49);
             button3.TabIndex = 3;
             button3.Text = "Register employee";
             button3.UseVisualStyleBackColor = true;
@@ -88,10 +88,10 @@
             // button4
             // 
             button4.Font = new Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(307, 248);
+            button4.Location = new Point(384, 310);
             button4.Margin = new Padding(2);
             button4.Name = "button4";
-            button4.Size = new Size(172, 39);
+            button4.Size = new Size(215, 49);
             button4.TabIndex = 3;
             button4.Text = "View Tables";
             button4.UseVisualStyleBackColor = true;
@@ -99,18 +99,19 @@
             // 
             // Admin_home
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(585, 584);
+            ClientSize = new Size(731, 730);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button1);
             Controls.Add(button2);
             Controls.Add(label1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "Admin_home";
             Text = "Admin_home";
             Load += Admin_home_Load;

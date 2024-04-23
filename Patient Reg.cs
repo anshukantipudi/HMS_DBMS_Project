@@ -29,6 +29,19 @@ namespace HMS
             }
         }
 
+        public void Clear_TB()
+        {
+            textBox1.Text = null;
+            textBox2.Text = null;
+            textBox3.Text = null;
+            textBox4.Text = null;
+            textBox5.Text = null;
+            textBox6.Text = null;
+            textBox7.Text = null;
+            textBox8.Text = null;
+            textBox9.Text = null;
+        }
+
         public Form3()
         {
             InitializeComponent();
@@ -62,6 +75,7 @@ namespace HMS
         private void Form3_Load(object sender, EventArgs e)
         {
             Connect_DB();
+            conn.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -85,6 +99,8 @@ namespace HMS
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            Connect_DB();
+
             int flag = 1;
             StringBuilder sb = new StringBuilder("");
 
@@ -123,6 +139,11 @@ namespace HMS
                 flag = 0;
                 MessageBox.Show("Password is a mandatory category");
             }
+            else if (String.IsNullOrEmpty(textBox9.Text))
+            {
+                flag = 0;
+                MessageBox.Show("PatientID is a mandatory category");
+            }
 
             if (radioButton1.Checked == true)
             {
@@ -145,7 +166,7 @@ namespace HMS
             //SQL querying
             String datequery = "STR_TO_DATE('" + monthCalendar1.SelectionRange.Start.ToString("d") + "', '%d-%m-%Y')";
 
-            String fullname = textBox1.Text +" "+ textBox3.Text;
+            String fullname = textBox1.Text +" "+ textBox2.Text +" "+ textBox3.Text;
 
             string InsertQuery = "INSERT INTO Patient(patient_id,password,name,gender,b_group,dob,email,phone,address) VALUES('" + textBox9.Text + "','" + textBox8.Text + "','" + fullname + "','" + sb.ToString() + "','" + textBox7.Text + "'," + datequery + ",'" + textBox5.Text + "'," + textBox4.Text + ",'" + textBox6.Text + "')";
 
@@ -157,6 +178,10 @@ namespace HMS
                 try
                 {
                     command.ExecuteNonQuery();
+                    MessageBox.Show("Data Inserted Successfully!");
+
+                    System.Threading.Thread.Sleep(1000);
+                    Clear_TB();
                 }
                 catch (Exception ex)
                 {

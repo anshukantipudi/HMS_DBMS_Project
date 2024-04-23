@@ -80,7 +80,7 @@
             button1.Name = "button1";
             button1.Size = new Size(285, 34);
             button1.TabIndex = 3;
-            button1.Text = "Not registers? Register here.";
+            button1.Text = "New? - Register Here.";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 

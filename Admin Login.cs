@@ -42,11 +42,11 @@ namespace HMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text == "admin" && textBox2.Text == "admin123")
+            if (textBox1.Text == "admin" && textBox2.Text == "admin123")
             {
                 Admin_home frm = new Admin_home();
+                this.Hide();
                 frm.Show();
-                this.Close();
             }
             else
             {
@@ -58,6 +58,11 @@ namespace HMS
         private void Admin_Login_Load(object sender, EventArgs e)
         {
             Connect_DB();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

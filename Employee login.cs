@@ -14,6 +14,21 @@ namespace HMS
 {
     public partial class Form4 : Form
     {
+        //Connection string
+        MySqlConnection conn = new MySqlConnection("SERVER=LOCALHOST;DATABASE=HMS;UID=root;PASSWORD=anshu;");
+
+        public void Connect_DB()
+        {
+            try
+            {
+                conn.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public Form4()
         {
             InitializeComponent();
@@ -21,21 +36,57 @@ namespace HMS
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
+            Connect_DB();
+            conn.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Contains("DC"))
+            Connect_DB();
+            String employee_id = textBox1.Text;
+            String password = textBox2.Text;
+            int eidcheck = 0;
+            int eid_pwd_check = 0;
+
+            String LoginQuery_pid = "SELECT patient_id FROM Patient WHERE patient_id = '" + employee_id + "'";
+            String LoginQuery_pwd = "SELECT password FROM Patient WHERE patient_id = '" + employee_id + "' AND password = '" + password + "'";
+
+            using (var command = new MySqlCommand(LoginQuery_pid, conn))
             {
-                Form5 frm = new Form5();
-                frm.Show();
+                int rowsAffected = command.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    eidcheck = 1;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Employee_ID!!!");
+                }
             }
-            else if (textBox1.Text.Contains("EM"))
+
+            if (eidcheck == 1)
             {
-                Form1 frmm = new Form1();
-                frmm.Show();
+                using (var command = new MySqlCommand(LoginQuery_pwd, conn))
+                {
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        eid_pwd_check = 1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Password!!!");
+                    }
+                }
             }
+
+            if (eid_pwd_check == 1)
+            {
+                MessageBox.Show("Successfully logged in!");
+                //Link Employee form here
+            }
+
+            conn.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
