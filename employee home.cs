@@ -89,20 +89,26 @@ namespace HMS
             textBox1.Text = reader.GetString(1);
             textBox2.Text = reader.GetString(2);
             textBox5.Text = reader.GetString(3);
-            textBox3.Text = reader.GetString(4);
-            textBox4.Text = reader.GetString(5);
+            textBox3.Text = reader.GetValue(4).ToString();
+            textBox4.Text = reader.GetMySqlDateTime(5).ToString();
             textBox6.Text = reader.GetString(6);
-            textBox7.Text = reader.GetString(7);
+            textBox7.Text = reader.GetValue(7).ToString();
             //added department somehow i'm too good bro
 
             reader.Close();
 
+            cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT dept_id FROM "+ Table +" WHERE e_id = '"+ employeeID +"'";
             MySqlDataReader dr = cmd.ExecuteReader();
-            dr.Read();
-
-            textBox10.Text = dr.GetString(0);
-
+            if (dr.Read()) // Check if there is at least one row
+            {
+                textBox10.Text = dr.GetValue(0).ToString();
+            }
+            else
+            {
+                // Handle case where no rows were returned
+                textBox10.Text = "No department found";
+            }
             dr.Close();
 
             cmd.Dispose();
