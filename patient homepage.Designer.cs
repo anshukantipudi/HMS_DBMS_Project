@@ -62,6 +62,7 @@
             patient_history_bt.TabIndex = 11;
             patient_history_bt.Text = "Bill History";
             patient_history_bt.UseVisualStyleBackColor = true;
+            patient_history_bt.Click += patient_history_bt_Click;
             // 
             // patient_reg_bt
             // 

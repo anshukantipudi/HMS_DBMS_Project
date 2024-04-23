@@ -84,5 +84,11 @@ namespace HMS
             test_history frm = new test_history(patient_id);
             frm.Show();
         }
+
+        private void patient_history_bt_Click(object sender, EventArgs e)
+        {
+            Billing_Details frm = new Billing_Details(patient_id);
+            frm.Show();
+        }
     }
 }
