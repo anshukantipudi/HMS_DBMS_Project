@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace HMS
 {
-    public partial class view_admitted_details : Form
+    public partial class view_admitted : Form
     {
-        public view_admitted_details()
+        public view_admitted()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
