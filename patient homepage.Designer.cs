@@ -50,6 +50,7 @@
             appt_bt.TabIndex = 12;
             appt_bt.Text = "Appointment History";
             appt_bt.UseVisualStyleBackColor = true;
+            appt_bt.Click += appt_bt_Click;
             // 
             // patient_history_bt
             // 
@@ -72,6 +73,7 @@
             patient_reg_bt.TabIndex = 10;
             patient_reg_bt.Text = "Prescription History";
             patient_reg_bt.UseVisualStyleBackColor = true;
+            patient_reg_bt.Click += patient_reg_bt_Click;
             // 
             // bill_details_bt
             // 
@@ -148,6 +150,7 @@
             button1.TabIndex = 10;
             button1.Text = "Test History";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // patient_homepage
             // 

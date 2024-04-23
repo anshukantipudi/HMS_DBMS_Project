@@ -66,5 +66,23 @@ namespace HMS
             patient_details frm = new patient_details(patient_id);
             frm.Show();
         }
+
+        private void appt_bt_Click(object sender, EventArgs e)
+        {
+            Appointment_Details frm = new Appointment_Details(patient_id);
+            frm.Show();
+        }
+
+        private void patient_reg_bt_Click(object sender, EventArgs e)
+        {
+            prescription_history frm = new prescription_history(patient_id);
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            test_history frm = new test_history(patient_id);
+            frm.Show();
+        }
     }
 }
