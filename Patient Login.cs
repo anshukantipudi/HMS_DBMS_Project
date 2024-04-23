@@ -29,6 +29,12 @@ namespace HMS
             }
         }
 
+        public void Clear_TB()
+        {
+            textBox1.Text = null;
+            textBox2.Text = null;
+        }
+
         public Form2()
         {
             InitializeComponent();
@@ -54,42 +60,49 @@ namespace HMS
             int pidcheck = 0;
             int pid_pwd_check = 0;
 
-            String LoginQuery_pid = "SELECT patient_id FROM Patient WHERE patient_id = '"+patient_id+"'";
-            String LoginQuery_pwd = "SELECT password FROM Patient WHERE patient_id = '" + patient_id + "' AND password = '"+ password +"'";
-            
+            String LoginQuery_pid = "SELECT patient_id FROM Patient WHERE patient_id = '" + patient_id + "'";
+            String LoginQuery_pwd = "SELECT password FROM Patient WHERE patient_id = '" + patient_id + "' AND password = '" + password + "'";
+
             using (var command = new MySqlCommand(LoginQuery_pid, conn))
             {
-                int rowsAffected = command.ExecuteNonQuery();
-                if (rowsAffected > 0)
+                try
                 {
+                    MySqlDataReader dr = command.ExecuteReader();
                     pidcheck = 1;
+                    dr.Close();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Invalid Patient_ID!!!");
+                    MessageBox.Show("Invalid Patient ID!!!");
+                    MessageBox.Show(ex.Message);
                 }
             }
 
-            if(pidcheck == 1)
+            if (pidcheck == 1)
             {
                 using (var command = new MySqlCommand(LoginQuery_pwd, conn))
                 {
-                    int rowsAffected = command.ExecuteNonQuery();
-                    if (rowsAffected > 0)
+                    try
                     {
+                        MySqlDataReader dr = command.ExecuteReader();
                         pid_pwd_check = 1;
+                        dr.Close();
                     }
-                    else
+                    catch (Exception ex)
                     {
                         MessageBox.Show("Invalid Password!!!");
+                        MessageBox.Show(ex.Message);
                     }
                 }
             }
 
             if (pid_pwd_check == 1)
             {
+                Clear_TB();
                 MessageBox.Show("Successfully logged in!");
+                //Form5 frm = new Form5(patient_id);
                 //Link Patient form here
+                //frm.Show();
             }
 
             conn.Close();

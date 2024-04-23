@@ -12,9 +12,11 @@ namespace HMS
 {
     public partial class Form5 : Form
     {
-        public Form5()
+        String emp_id;
+        public Form5(String emp_id)
         {
             InitializeComponent();
+            this.emp_id = emp_id;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -25,6 +27,16 @@ namespace HMS
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.emp_id);
         }
     }
 }

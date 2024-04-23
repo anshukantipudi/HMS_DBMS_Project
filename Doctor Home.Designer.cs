@@ -54,6 +54,7 @@
             button1.TabIndex = 1;
             button1.Text = "Appointment";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form5
             // 
@@ -67,6 +68,7 @@
             Controls.Add(label1);
             Name = "Form5";
             Text = "Form5";
+            Load += Form5_Load;
             ResumeLayout(false);
             PerformLayout();
         }

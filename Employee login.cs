@@ -29,6 +29,12 @@ namespace HMS
             }
         }
 
+        public void Clear_TB()
+        {
+            textBox1.Text = null;
+            textBox2.Text = null;
+        }
+
         public Form4()
         {
             InitializeComponent();
@@ -48,19 +54,21 @@ namespace HMS
             int eidcheck = 0;
             int eid_pwd_check = 0;
 
-            String LoginQuery_pid = "SELECT patient_id FROM Patient WHERE patient_id = '" + employee_id + "'";
-            String LoginQuery_pwd = "SELECT password FROM Patient WHERE patient_id = '" + employee_id + "' AND password = '" + password + "'";
+            String LoginQuery_eid = "SELECT e_id FROM Employee WHERE e_id = '" + employee_id + "'";
+            String LoginQuery_pwd = "SELECT password FROM Employee WHERE e_id = '" + employee_id + "' AND password = '" + password + "'";
 
-            using (var command = new MySqlCommand(LoginQuery_pid, conn))
+            using (var command = new MySqlCommand(LoginQuery_eid, conn))
             {
-                int rowsAffected = command.ExecuteNonQuery();
-                if (rowsAffected > 0)
+                try
                 {
+                    MySqlDataReader dr = command.ExecuteReader();
                     eidcheck = 1;
+                    dr.Close();
                 }
-                else
+                catch(Exception ex)
                 {
-                    MessageBox.Show("Invalid Employee_ID!!!");
+                    MessageBox.Show("Invalid Employee ID!!!");
+                    MessageBox.Show(ex.Message);
                 }
             }
 
@@ -68,22 +76,27 @@ namespace HMS
             {
                 using (var command = new MySqlCommand(LoginQuery_pwd, conn))
                 {
-                    int rowsAffected = command.ExecuteNonQuery();
-                    if (rowsAffected > 0)
+                    try
                     {
+                        MySqlDataReader dr = command.ExecuteReader();
                         eid_pwd_check = 1;
+                        dr.Close();
                     }
-                    else
+                    catch (Exception ex)
                     {
                         MessageBox.Show("Invalid Password!!!");
+                        MessageBox.Show(ex.Message);
                     }
                 }
             }
 
             if (eid_pwd_check == 1)
             {
+                Clear_TB();
                 MessageBox.Show("Successfully logged in!");
+                Form5 frm = new Form5(employee_id);
                 //Link Employee form here
+                frm.Show();
             }
 
             conn.Close();
