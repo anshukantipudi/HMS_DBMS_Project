@@ -41,19 +41,20 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Book Antiqua", 24F, FontStyle.Bold | FontStyle.Italic);
-            label1.Location = new Point(141, 24);
+            label1.Location = new Point(176, 30);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(306, 49);
+            label1.Size = new Size(286, 58);
             label1.TabIndex = 4;
-            label1.Text = "Execute Queries";
+            label1.Text = "View Tables";
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(310, 113);
+            comboBox1.Location = new Point(388, 141);
+            comboBox1.Margin = new Padding(4, 4, 4, 4);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(205, 28);
+            comboBox1.Size = new Size(255, 33);
             comboBox1.TabIndex = 5;
             // 
             // label2
@@ -61,20 +62,20 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Book Antiqua", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(99, 113);
+            label2.Location = new Point(124, 141);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(152, 28);
+            label2.Size = new Size(173, 35);
             label2.TabIndex = 6;
             label2.Text = "Select Table :";
             // 
             // ViewGrid_bt
             // 
             ViewGrid_bt.Font = new Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ViewGrid_bt.Location = new Point(223, 160);
+            ViewGrid_bt.Location = new Point(279, 200);
             ViewGrid_bt.Margin = new Padding(2);
             ViewGrid_bt.Name = "ViewGrid_bt";
-            ViewGrid_bt.Size = new Size(138, 37);
+            ViewGrid_bt.Size = new Size(172, 46);
             ViewGrid_bt.TabIndex = 7;
             ViewGrid_bt.Text = "View";
             ViewGrid_bt.UseVisualStyleBackColor = true;
@@ -83,24 +84,26 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(47, 221);
+            dataGridView1.Location = new Point(59, 276);
+            dataGridView1.Margin = new Padding(4, 4, 4, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(500, 350);
+            dataGridView1.Size = new Size(625, 438);
             dataGridView1.TabIndex = 8;
             // 
             // view_tables
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background_image;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(585, 609);
+            ClientSize = new Size(731, 761);
             Controls.Add(dataGridView1);
             Controls.Add(ViewGrid_bt);
             Controls.Add(label2);
             Controls.Add(comboBox1);
             Controls.Add(label1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "view_tables";
             Text = "view_tables";
             Load += view_tables_Load;

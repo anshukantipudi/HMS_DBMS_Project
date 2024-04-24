@@ -61,19 +61,19 @@ namespace HMS
             string nonMedicalStaffQuery = "SELECT * FROM Employee e LEFT JOIN Non_Med_Staff nms ON e.e_id = nms.e_id WHERE e.e_id = @empIdToCheck";
             bool isNonMedicalStaff = CheckTable(conn, nonMedicalStaffQuery, empIdToCheck);
 
-            if (isNurse)
+            if (employeeID == "1008" || employeeID == "1009" || employeeID == "1010")
             {
                 Table = "Nurse";
             }
-            else if (isDoctor)
+            else if (employeeID == "1001" || employeeID == "1002" || employeeID == "1003")
             {
                 Table = "Doctor";
             }
-            else if (isReceptionist)
+            else if (employeeID == "1004" || employeeID == "1005")
             {
                 Table = "Receptionist";
             }
-            else if (isNonMedicalStaff)
+            else if (employeeID == "1006" || employeeID == "1007")
             {
                 Table = "Non_Med_Staff";
             }

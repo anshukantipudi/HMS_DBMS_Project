@@ -52,7 +52,7 @@
             // button2
             // 
             button2.Font = new Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(76, 310);
+            button2.Location = new Point(99, 258);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(215, 49);
@@ -64,7 +64,7 @@
             // button1
             // 
             button1.Font = new Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(76, 212);
+            button1.Location = new Point(99, 160);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(215, 49);
@@ -76,7 +76,7 @@
             // button3
             // 
             button3.Font = new Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(384, 212);
+            button3.Location = new Point(407, 160);
             button3.Margin = new Padding(2);
             button3.Name = "button3";
             button3.Size = new Size(215, 49);
@@ -88,7 +88,7 @@
             // button4
             // 
             button4.Font = new Font("Book Antiqua", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(384, 310);
+            button4.Location = new Point(407, 258);
             button4.Margin = new Padding(2);
             button4.Name = "button4";
             button4.Size = new Size(215, 49);
@@ -102,7 +102,6 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(731, 730);
@@ -111,7 +110,7 @@
             Controls.Add(button1);
             Controls.Add(button2);
             Controls.Add(label1);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Admin_home";
             Text = "Admin_home";
             Load += Admin_home_Load;

@@ -55,12 +55,37 @@ namespace HMS
         private void Form5_Load(object sender, EventArgs e)
         {
             Connect_DB();
+
+            String AptQuery = "SELECT * FROM Appointment WHERE doctor_id = '" + emp_id + "'";
+            MySqlDataAdapter da = new MySqlDataAdapter(AptQuery, conn);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+
+            da.Dispose();
+            ds.Dispose();
+
+            String PatientQuery = "SELECT * FROM Prescription WHERE patient_id IN (SELECT patient_id FROM Appointment WHERE doctor_id = '" + emp_id + "')";
+            MySqlDataAdapter da1 = new MySqlDataAdapter(PatientQuery, conn);
+            DataSet ds1 = new DataSet();
+            da1.Fill(ds1);
+            dataGridView2.DataSource = ds1.Tables[0];
+
+            da1.Dispose();
+            ds1.Dispose();
+
             conn.Close();
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void write_bt_Click(object sender, EventArgs e)
+        {
+            Prescription frm = new Prescription(emp_id);
+            frm.Show();
         }
     }
 }

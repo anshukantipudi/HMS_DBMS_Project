@@ -117,7 +117,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Admin_Login";
             Text = "Admin_Login";
             Load += Admin_Login_Load;

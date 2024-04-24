@@ -95,14 +95,14 @@
             // button3
             // 
             button3.Font = new Font("Book Antiqua", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(284, 300);
+            button3.Location = new Point(284, 298);
             button3.Margin = new Padding(2);
             button3.Name = "button3";
             button3.Size = new Size(160, 42);
-            button3.TabIndex = 3;
+            button3.TabIndex = 4;
             button3.Text = "Admin";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button2_Click;
+            button3.Click += button3_Click_1;
             // 
             // Login
             // 
@@ -112,8 +112,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(731, 730);
-            Controls.Add(label2);
             Controls.Add(button3);
+            Controls.Add(label2);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
