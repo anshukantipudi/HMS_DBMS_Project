@@ -58,7 +58,7 @@ namespace HMS
             da1.Dispose();
             ds1.Dispose();
 
-            String MedQuery = "SELECT * FROM Med_Presc INNER JOIN Prescription ON presc_id";
+            String MedQuery = "SELECT * FROM Med_Presc NATURAL JOIN Prescription";
             MySqlDataAdapter da = new MySqlDataAdapter(MedQuery, conn);
             DataSet ds = new DataSet();
             da.Fill(ds);

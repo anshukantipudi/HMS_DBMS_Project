@@ -107,7 +107,7 @@ namespace HMS
 
             //String datequery = "STR_TO_DATE('" + date.ToString("d") + "', '%d-%m-%Y')";
 
-            string InsertQuery = "INSERT INTO Appointment(app_id,e_id,patient_id,app_time,app_date) VALUES('"+textBox1.Text+"','"+doctor_combobox.Text+"','"+patient_combobox+"',"+time+","+date+")";
+            string InsertQuery = "INSERT INTO Appointment(app_id,doctor_id,patient_id,app_time,app_date) VALUES('"+textBox1.Text+"','"+doctor_combobox.Text+"','"+patient_combobox+"',"+time+","+date+")";
 
             MySqlCommand command = new MySqlCommand(InsertQuery, conn);
 
