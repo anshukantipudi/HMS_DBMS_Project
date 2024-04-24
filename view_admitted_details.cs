@@ -36,7 +36,7 @@ namespace HMS
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void view_admitted_details_Load(object sender, EventArgs e)
@@ -68,6 +68,11 @@ namespace HMS
             ds.Dispose();
 
             conn.Close();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

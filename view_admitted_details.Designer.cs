@@ -106,6 +106,7 @@
             dataGridView2.RowHeadersWidth = 62;
             dataGridView2.Size = new Size(644, 211);
             dataGridView2.TabIndex = 19;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // view_admitted_details
             // 
@@ -119,7 +120,7 @@
             Controls.Add(ViewGrid_bt);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "view_admitted_details";
             Text = "view_admitted_details";
             Load += view_admitted_details_Load;

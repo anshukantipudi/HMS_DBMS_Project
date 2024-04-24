@@ -87,5 +87,10 @@ namespace HMS
             Prescription frm = new Prescription(emp_id);
             frm.Show();
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

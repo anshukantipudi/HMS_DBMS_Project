@@ -47,7 +47,7 @@ namespace HMS
         {
             Connect_DB();
 
-            String AptQuery = "SELECT * FROM Appointment WHERE patient_id = '"+ patient_id +"'";
+            String AptQuery = "SELECT * FROM Appointment WHERE patient_id = '" + patient_id + "'";
             MySqlDataAdapter da = new MySqlDataAdapter(AptQuery, conn);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -56,6 +56,11 @@ namespace HMS
             da.Dispose();
             ds.Dispose();
             conn.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
