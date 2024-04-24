@@ -137,7 +137,8 @@ namespace HMS
         {
             if (Table == "Doctor")
             {
-
+                Form5 frm = new Form5(employeeID);
+                frm.Show();
             }
             else if (Table == "Nurse")
             {

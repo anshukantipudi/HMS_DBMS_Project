@@ -29,32 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
-            label1 = new Label();
-            button1 = new Button();
+            label2 = new Label();
             SuspendLayout();
             // 
-            // label1
+            // label2
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Book Antiqua", 24F, FontStyle.Bold | FontStyle.Italic);
-            label1.Location = new Point(159, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(411, 58);
-            label1.TabIndex = 0;
-            label1.Text = "Doctor Homepage";
-            label1.Click += label1_Click;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Book Antiqua", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(246, 127);
-            button1.Name = "button1";
-            button1.Size = new Size(241, 58);
-            button1.TabIndex = 1;
-            button1.Text = "Appointment";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Book Antiqua", 24F, FontStyle.Bold | FontStyle.Italic);
+            label2.Location = new Point(153, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(411, 58);
+            label2.TabIndex = 7;
+            label2.Text = "Doctor Homepage";
+            label2.Click += label2_Click;
             // 
             // Form5
             // 
@@ -64,8 +52,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(731, 730);
-            Controls.Add(button1);
-            Controls.Add(label1);
+            Controls.Add(label2);
             Name = "Form5";
             Text = "Form5";
             Load += Form5_Load;
@@ -74,8 +61,6 @@
         }
 
         #endregion
-
-        private Label label1;
-        private Button button1;
+        private Label label2;
     }
 }
