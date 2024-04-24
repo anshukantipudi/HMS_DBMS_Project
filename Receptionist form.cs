@@ -67,12 +67,18 @@ namespace HMS
 
         private void emp_details_bt_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void inv_mgmt_bt_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void apt_book_bt_Click(object sender, EventArgs e)
+        {
+            Appointment_Booking frm = new Appointment_Booking();
+            frm.Show();
         }
     }
 }

@@ -34,6 +34,7 @@
             patient_reg_bt = new Button();
             patient_history_bt = new Button();
             appt_bt = new Button();
+            apt_book_bt = new Button();
             SuspendLayout();
             // 
             // label1
@@ -91,6 +92,17 @@
             appt_bt.UseVisualStyleBackColor = true;
             appt_bt.Click += appt_bt_Click;
             // 
+            // apt_book_bt
+            // 
+            apt_book_bt.Font = new Font("Book Antiqua", 12F, FontStyle.Bold);
+            apt_book_bt.Location = new Point(221, 316);
+            apt_book_bt.Name = "apt_book_bt";
+            apt_book_bt.Size = new Size(288, 51);
+            apt_book_bt.TabIndex = 6;
+            apt_book_bt.Text = "Appointment Booking";
+            apt_book_bt.UseVisualStyleBackColor = true;
+            apt_book_bt.Click += apt_book_bt_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -98,6 +110,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(731, 730);
+            Controls.Add(apt_book_bt);
             Controls.Add(appt_bt);
             Controls.Add(patient_history_bt);
             Controls.Add(patient_reg_bt);
@@ -117,5 +130,6 @@
         private Button patient_reg_bt;
         private Button patient_history_bt;
         private Button appt_bt;
+        private Button apt_book_bt;
     }
 }
